@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cl_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Activity.CatDetailActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/cat"
+                layout="@layout/cat" />
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/catImage"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center"-->
+            <!--            android:background="@android:color/white"-->
+            <!--            android:minWidth="200dp"-->
+            <!--            android:minHeight="200dp"-->
+            <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--            app:layout_constraintRight_toRightOf="parent"-->
+            <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--        <TextView-->
+            <!--            android:id="@+id/name"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_below="@id/catImage"-->
+            <!--            android:layout_centerInParent="true"-->
+            <!--            android:text="Name"-->
+            <!--            android:textColor="@android:color/black"-->
+            <!--            android:textSize="50sp"-->
+            <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--            app:layout_constraintRight_toRightOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/catImage" />-->
+
+            <!--        <TextView-->
+            <!--            android:id="@+id/favorite_label"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="favorite:"-->
+            <!--            android:textSize="30dp"-->
+            <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--            app:layout_constraintRight_toRightOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/name" />-->
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/favoriteBotton"-->
+            <!--            android:layout_width="46dp"-->
+            <!--            android:layout_height="46dp"-->
+            <!--            app:layout_constraintLeft_toRightOf="@+id/favorite_label"-->
+            <!--            app:layout_constraintTop_toTopOf="@+id/favorite_label"-->
+            <!--            app:srcCompat="@drawable/ic_star_border" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/cl_top"
+            app:layout_constraintTop_toBottomOf="@id/cl_top">
+
+            <TextView
+                android:id="@+id/description_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail description about cat breed"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description_label" />
+
+            <TextView
+                android:id="@+id/detail_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Details"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+            <TextView
+                android:id="@+id/weight_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight: "
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_label" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="weight"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toRightOf="@+id/weight_label"
+                app:layout_constraintTop_toTopOf="@+id/weight_label" />
+
+            <TextView
+                android:id="@+id/temperament_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperament: "
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+            <TextView
+                android:id="@+id/temperament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="temperament"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toRightOf="@id/temperament_label"
+                app:layout_constraintTop_toTopOf="@+id/temperament_label" />
+
+            <TextView
+                android:id="@+id/origin_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Origin: "
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temperament" />
+
+            <TextView
+                android:id="@+id/origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="origin"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toRightOf="@+id/origin_label"
+                app:layout_constraintTop_toTopOf="@+id/origin_label" />
+
+            <TextView
+                android:id="@+id/lifespan_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lifespan: "
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/origin" />
+
+            <TextView
+                android:id="@+id/lifespan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lifespan"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toRightOf="@+id/lifespan_label"
+                app:layout_constraintTop_toTopOf="@+id/lifespan_label" />
+
+            <TextView
+                android:id="@+id/wiki_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wiki Link: "
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lifespan" />
+
+            <TextView
+                android:id="@+id/wikiLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wiki link"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toRightOf="@+id/wiki_label"
+                app:layout_constraintTop_toTopOf="@+id/wiki_label" />
+
+            <TextView
+                android:id="@+id/dog_friendly_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dog Friendliness Level: "
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wikiLink" />
+
+            <TextView
+                android:id="@+id/dog_friendly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dog friendly"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toRightOf="@+id/dog_friendly_label"
+                app:layout_constraintTop_toTopOf="@+id/dog_friendly_label" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
